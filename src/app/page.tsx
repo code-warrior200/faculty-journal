@@ -9,14 +9,14 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
       <section
-        className="text-center py-16 text-white mx-4 md:mx-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat"
+        className="text-center py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat"
       >
-        <div className="bg-green-500 bg-opacity-75 p-10 rounded-lg">
-          <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science & Science Education Journals</h1>
-          <p className="mt-4 text-lg">A platform to explore, read, and submit research manuscripts.</p>
+        <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
+          <p className="mt-4 font-bold text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
           <a
             href="/journals"
-            className="mt-6 inline-block bg-white text-green-400 px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+            className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
           >
             Browse Journals
           </a>
@@ -28,21 +28,21 @@ export default function Home() {
         <h2 className="text-3xl font-bold">Why Choose Us?</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-            <span className="text-green-500 text-4xl mb-3">
+            <span className="text-green-700 text-4xl mb-3">
                <FaBookOpen />
             </span>
             <h3 className="text-xl font-bold">Open Access</h3>
             <p className="text-gray-600 mt-2">All research papers are freely available to everyone.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-            <span className="text-green-500 text-4xl mb-3">
+            <span className="text-green-700 text-4xl mb-3">
               <FaRocket /> 
             </span>
-            <h3 className="text-xl font-bold">Instant Publishing</h3>
-            <p className="text-gray-600 mt-2">No admin approval required—your manuscript is published immediately.</p>
+            <h3 className="text-xl font-bold">Publish When Verified</h3>
+            <p className="text-gray-600 mt-2">Admin approval is required before publishing after manuscript is submitted.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-            <span className="text-green-500 text-4xl mb-3">
+            <span className="text-green-700 text-4xl mb-3">
               <FaSearch />
             </span>
             <h3 className="text-xl font-bold">Search & Filter</h3>
@@ -75,7 +75,7 @@ export default function Home() {
         <p className="mt-4 text-lg text-gray-600">Submit your manuscript today and contribute to scientific knowledge.</p>
         <a
           href="/submit"
-          className="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition"
+          className="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
         >
           Submit Manuscript
         </a>

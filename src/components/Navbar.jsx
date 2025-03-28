@@ -10,16 +10,17 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-green-600 text-white p-4 shadow-md fixed top-0 w-full z-50">
+    <nav className="bg-green-700 text-white p-4 shadow-md fixed top-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-xl font-bold">Faculty Journals</h1>
+        <h1 className="text-xl font-bold">Faculty Journal</h1>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/editorial" className="hover:underline">Editorial Board</Link>
           <Link href="/departments" className="hover:underline">Departments</Link>
-          <Link href="/journals" className="hover:underline">Journals</Link>
+          <Link href="/archives" className="hover:underline">Archives</Link>
           <Link href="/submit" className="hover:underline">Submit Manuscript</Link>
         </div>
 
@@ -34,7 +35,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-16 left-0 w-full bg-green-700 text-white transition-all duration-300 ease-in-out ${
+        className={`absolute top-16 left-0 w-full bg-gray-200 opacity-95 text-green-700 font-bold transition-all duration-300 ease-in-out ${
           isOpen ? "block" : "hidden"
         } md:hidden`}
       >
@@ -45,13 +46,18 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link href="/editorial" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
+              Editorial Board
+            </Link>
+          </li>
+          <li>
             <Link href="/departments" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
               Departments
             </Link>
           </li>
           <li>
-            <Link href="/journals" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
-              Journals
+            <Link href="/archives" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
+              Archives
             </Link>
           </li>
           <li>

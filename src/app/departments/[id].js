@@ -11,7 +11,7 @@ export default function DepartmentDetails() {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-4xl font-bold text-blue-600">{department.name}</h1>
+      <h1 className="text-4xl font-bold text-green-600">{department.name}</h1>
       <p className="text-gray-700 mt-4">{department.description}</p>
 
       {/* Faculty Members */}
@@ -21,7 +21,7 @@ export default function DepartmentDetails() {
           {department.facultyMembers.map((member, index) => (
             <li key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
               <p className="font-medium">{member.name}</p>
-              <p className="text-gray-600 text-sm">{member.specialization}</p>
+              <p className="text-green-600 text-sm">{member.specialization}</p>
             </li>
           ))}
         </ul>

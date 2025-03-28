@@ -16,7 +16,7 @@ export default function DepartmentCard({ department }) {
         </ul>
       </div>
 
-      <Link href={`/departments/${department.id}`} className="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+      <Link href={`/departments/${department.id}`} className="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
         View Department
       </Link>
     </div>
