@@ -19,9 +19,9 @@ export default function DepartmentDetails() {
         <h2 className="text-2xl font-semibold text-gray-800">Faculty Members</h2>
         <ul className="mt-2 space-y-2">
           {department.facultyMembers.map((member, index) => (
-            <li key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
-              <p className="font-medium">{member.name}</p>
-              <p className="text-green-600 text-sm">{member.specialization}</p>
+            <li key={index} className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <p className="font-medium text-gray-900">{member.name}</p>
+              <p className="text-sm text-gray-600">Specialization: {member.specialization}</p>
             </li>
           ))}
         </ul>

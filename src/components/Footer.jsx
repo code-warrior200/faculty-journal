@@ -7,7 +7,7 @@ export default function Footer() {
             <a href="/" className="text-gray-400 hover:text-white transition">Home</a>
             <a href="/departments" className="text-gray-400 hover:text-white transition">Departments</a>
             <a href="/journals" className="text-gray-400 hover:text-white transition">Journals</a>
-            <a href="/submit" className="text-gray-400 hover:text-white transition">Submit Manuscript</a>
+            <a href="/faculty" className="text-gray-400 hover:text-white transition">Faculty Journal</a>
           </div>
         </div>
       </footer>

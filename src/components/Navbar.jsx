@@ -12,16 +12,21 @@ export default function Navbar() {
   return (
     <nav className="bg-green-700 text-white p-4 shadow-md fixed top-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
+
         {/* Logo */}
-        <h1 className="text-xl font-bold">Faculty Journal</h1>
+        <Link href="/" className="flex items-center space-x-2">
+          <img src="/image/logo.png" alt="Faculty Journal Logo" className="h-10 w-10 object-contain" />
+          <span className="text-xl font-bold">Faculty Of Science</span>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/faculty" className="hover:underline">Faculty Journal</Link>
           <Link href="/editorial" className="hover:underline">Editorial Board</Link>
           <Link href="/departments" className="hover:underline">Departments</Link>
           <Link href="/archives" className="hover:underline">Archives</Link>
-          <Link href="/submit" className="hover:underline">Submit Manuscript</Link>
+          {/* <Link href="/submit" className="hover:underline">Submit Manuscript</Link> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -46,6 +51,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link href="/faculty" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
+              Faculty Journal
+            </Link>
+          </li>
+          <li>
             <Link href="/editorial" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
               Editorial Board
             </Link>
@@ -60,11 +70,11 @@ export default function Navbar() {
               Archives
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/submit" className="block py-2 text-center hover:bg-green-800 rounded-md" onClick={closeMenu}>
               Submit Manuscript
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

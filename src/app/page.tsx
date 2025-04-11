@@ -1,85 +1,100 @@
 'use client'
-import { FaBookOpen, FaRocket, FaSearch } from "react-icons/fa";
+import { useEffect, useState } from 'react';
+
+const carouselImages = [
+  {
+    src: '/image/FUEZ-1.jpg',
+    caption: 'Discover New Frontiers',
+  },
+  {
+    src: '/image/FUEZ-1.jpg',
+    caption: 'Innovate Through Science',
+  },
+  {
+    src: '/image/FUEZ-1.jpg',
+    caption: 'Connect With Global Scholars',
+  },
+];
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="space-y-12">
-      {/* Science SVG Background */}
-      <div className="absolute inset-0 bg-[url('/science.jpg')] bg-cover opacity-10"></div>
-
-      {/* Hero Section with Background Image */}
-      <section
-        className="text-center py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat"
-      >
-        <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
-          <p className="mt-4 font-bold text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
-          <a
-            href="/journals"
-            className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
+    <div className="space-y-12 relative overflow-hidden">
+      
+      {/* Carousel Section */}
+      <section className="relative h-[400px] mt-15 md:h-[500px] w-full">
+        {carouselImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
           >
-            Browse Journals
-          </a>
-        </div>
+            <img
+              src={image.src}
+              alt={image.caption}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
+              <h2 className="text-gray-800 bg-gray-100 rounded-b-full text-3xl md:text-4xl font-bold text-center px-4">
+                {image.caption}
+              </h2>
+            </div>
+          </div>
+        ))}
       </section>
-
-      {/* Features Section */}
-      <section className="text-center mx-4 md:mx-0">
-        <h2 className="text-3xl font-bold">Why Choose Us?</h2>
-        <div className="grid md:grid-cols-3 gap-6 mt-6">
-          <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-            <span className="text-green-700 text-4xl mb-3">
-               <FaBookOpen />
-            </span>
-            <h3 className="text-xl font-bold">Open Access</h3>
-            <p className="text-gray-600 mt-2">All research papers are freely available to everyone.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-            <span className="text-green-700 text-4xl mb-3">
-              <FaRocket /> 
-            </span>
-            <h3 className="text-xl font-bold">Publish When Verified</h3>
-            <p className="text-gray-600 mt-2">Admin approval is required before publishing after manuscript is submitted.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-            <span className="text-green-700 text-4xl mb-3">
-              <FaSearch />
-            </span>
-            <h3 className="text-xl font-bold">Search & Filter</h3>
-            <p className="text-gray-600 mt-2">Find journals by category, department, or publication date.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Journals */}
-      <section className="mx-4 md:mx-0">
-        <h2 className="text-3xl font-bold text-center">Latest Research Journals</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {[
-            { title: "Advances in Quantum Physics", category: "Physics", description: "Exploring quantum mechanics and its applications." },
-            { title: "AI in Healthcare", category: "Computer Science", description: "Impact of artificial intelligence in medical research." },
-            { title: "Climate Change & Ecosystems", category: "Environmental Science", description: "How climate change affects biodiversity." }
-          ].map((journal, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow transition hover:shadow-lg">
-              <h3 className="text-xl font-bold">{journal.title}</h3>
-              <p className="text-sm text-gray-600">{journal.category}</p>
-              <p className="mt-2">{journal.description}</p>
+        {/* University Leadership Section */}
+        <section className="mx-4 md:mx-0 py-12">
+          <h2 className="text-3xl font-bold text-center mb-10">Meet Our Leadership</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: 'Dr. Suleiman Balarabe',
+                role: 'Acting Vice Chancellor',
+                image: '/image/VC-acting.jpg',
+                bio: 'Dr. Suleiman Balarabe is a visionary leader committed to academic excellence and innovation.'
+              },
+              {
+                name: 'Dr. Halima S. Bello',
+                role: 'Registrar',
+                image: '/image/Resgistrar.jpg',
+                bio: 'Dr. Bello oversees the university’s administrative affairs with transparency and efficiency.'
+              },
+              {
+                name: 'Prof. John I. Okoye',
+                role: 'Dean, Faculty of Science',
+                image: '/image/dean.jpg',
+                bio: 'Prof. Okoye leads the Faculty of Science with a focus on research and student success.'
+              },
+              {
+                name: 'Mrs. Grace N. Aliyu',
+                role: 'Faculty Officer',
+                image: '/image/faculty-officer.jpg',
+                bio: 'Mrs. Aliyu manages the faculty’s daily operations, ensuring smooth coordination.'
+              }
+          ].map((person, index) => (
+            <div key={index} className="bg-white rounded-lg shadow p-6 text-center">
+              <img
+                src={person.image}
+                alt={person.name}
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              />
+              <h3 className="text-xl text-gray-800 font-bold">{person.name}</h3>
+              <p className="text-green-700 font-semibold">{person.role}</p>
+              <p className="text-gray-800 text-sm mt-2">{person.bio}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="text-center  py-12   mx-4 md:mx-0">
-        <h2 className="text-3xl font-bold">Ready to Share Your Research?</h2>
-        <p className="mt-4 text-lg text-gray-600">Submit your manuscript today and contribute to scientific knowledge.</p>
-        <a
-          href="/submit"
-          className="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
-        >
-          Submit Manuscript
-        </a>
-      </section>
     </div>
   );
 }
