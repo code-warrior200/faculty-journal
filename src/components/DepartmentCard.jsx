@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function DepartmentCard({ department }) {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 transition hover:shadow-lg">
-      <h2 className="text-2xl font-semibold text-green-500">{department.name}</h2>
+      <a href={`/departments/${department.id}`} className="text-2xl font-semibold text-green-500">{department.name}</a>
       <p className="text-gray-700 mt-2">{department.description}</p>
 
       <div className="mt-4">
