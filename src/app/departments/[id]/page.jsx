@@ -1,60 +1,87 @@
-'use client'
-import React from 'react'
-import { useParams } from 'next/navigation'
+"use client";
+import React from "react";
+import { useParams } from "next/navigation";
 import { departments } from "../departmentData";
 
 const DepartmentDetails = () => {
-    const { id } = useParams()
+  const { id } = useParams();
+  const department = departments.find((dept) => dept.id === id);
 
-    console.log(id)
+  if (!department) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p className="text-gray-500 text-lg">Department not found.</p>
+      </div>
+    );
+  }
 
-    const department = departments.find((dept) => dept.id === id);
-
-    console.log(department)
-
-    if (!department) return <p className="text-center text-gray-500 mt-10">Department not found.</p>;  
   return (
-    <div className="max-w-4xl mx-auto p-6 py-15">
-      <h1 className="text-4xl font-bold text-green-600">{department.name}</h1>
-      <p className="text-gray-200 mt-4">{department.description}</p>
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      {/* Department Header */}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
+          {department.name}
+        </h1>
+        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+          {department.description}
+        </p>
+      </div>
 
-      {/* Faculty Members */}
-      <div className="mt-6">
-        <h2 className="text-2xl font-semibold text-white">Faculty Members</h2>
-        <ul className="mt-2 space-y-2">
+      {/* Faculty Members Section */}
+      <section className="mb-16">
+        {/* <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          Faculty Members
+        </h2> */}
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {department.departmentMembers.map((member, index) => (
-            <li key={index} className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
-              <p className="font-medium text-gray-900">{member.name}</p>
-              <p className="text-sm text-gray-600">Specialization: {member.specialization}</p>
-            </li>
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow hover:shadow-lg p-6 transition duration-300 border border-gray-100"
+            >
+              <p className="text-xl font-semibold text-gray-800">{member.name}</p>
+              <p className="text-green-600 mt-1 text-sm">
+                Position: {member.Possition}
+              </p>
+            </div>
           ))}
-        </ul>
-      </div>
+        </div>
+      </section>
 
-      {/* Research Areas */}
-      <div className="mt-6">
-        <h2 className="text-2xl font-semibold text-white">Research Areas</h2>
-        <ul className="list-disc pl-5 text-gray-300">
+      {/* Research Areas Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          Research Areas
+        </h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
           {department.researchAreas.map((area, index) => (
-            <li key={index}>{area}</li>
+            <li key={index} className="text-lg">{area}</li>
           ))}
         </ul>
-      </div>
+      </section>
 
-      {/* Journals */}
-      <div className="mt-6">
-        <h2 className="text-2xl font-semibold text-white">Recent Journals</h2>
-        <ul className="mt-2 space-y-2">
+      {/* Recent Journals Section */}
+      <section>
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          Recent Journals
+        </h2>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
           {department.journals.map((journal, index) => (
-            <li key={index} className="p-4 bg-gray-100 rounded-lg shadow-md">
-              <p className="font-medium text-black">{journal.title}</p>
-              <p className="text-gray-600 text-sm">By {journal.author} - {journal.date}</p>
-            </li>
+            <div
+              key={index}
+              className="bg-gray-50 rounded-xl shadow-sm hover:shadow-md p-6 border border-gray-200 transition duration-300"
+            >
+              <p className="text-lg font-semibold text-gray-900 mb-2">
+                {journal.title}
+              </p>
+              <p className="text-sm text-gray-600">
+                By {journal.author} • {journal.date}
+              </p>
+            </div>
           ))}
-        </ul>
-      </div>
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default DepartmentDetails
+export default DepartmentDetails;

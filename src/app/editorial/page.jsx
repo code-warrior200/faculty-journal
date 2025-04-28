@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -6,51 +7,123 @@ import clsx from "clsx";
 
 const boardMembers = [
   {
-    name: "Prof. John Doe",
-    position: "Chief Editor",
-    department: "Physics",
+    name: "Dr. Saeed Gbolahan Adewusi",
+    position: "Editor in-Chief",
     image: "/editor1.jpg",
-    bio: "Expert in quantum mechanics with 20+ years of research experience.",
     category: "science",
   },
   {
-    name: "Dr. Jane Smith",
-    position: "Deputy Editor",
-    department: "Biology",
+    name: "Dr. A.D. OnuFCSN, MICCON",
+    position: "Editor",
     image: "/editor2.jpg",
-    bio: "Specialist in microbiology and genetic engineering research.",
     category: "science",
   },
   {
-    name: "Dr. Ahmed Hassan",
-    position: "Associate Editor",
-    department: "Computer Science",
+    name: "Dr. H.A Sulaimon",
+    position: "Member",
     image: "/editor3.jpg",
-    bio: "AI researcher focused on machine learning and neural networks.",
-    category: "najosa",
+    category: "science",
   },
   {
-    name: "Dr. Sarah Johnson",
-    position: "Editorial Board Member",
-    department: "Environmental Science",
+    name: "Dr. A. Maikano",
+    position: "Member",
     image: "/editor4.jpg",
-    bio: "Studies the impact of climate change on marine ecosystems.",
-    category: "najosa",
+    category: "science",
   },
   {
-    name: "Prof. Michael Brown",
-    position: "Editorial Board Member",
-    department: "Chemistry",
+    name: "Dr. Jaffar Aliyu",
+    position: "Member",
     image: "/editor5.jpg",
-    bio: "Specialist in organic chemistry and drug synthesis.",
+    category: "science",
+  },
+  {
+    name: "Dr. Zubairu Ahmed",
+    position: "Member",
+    image: "/editor6.jpg",
+    category: "science",
+  },
+  {
+    name: "Dr. Abdulahi Lawal",
+    position: "Member",
+    image: "/editor7.jpg",
+    category: "science",
+  },
+  {
+    name: "Prof. V.O Ajibola",
+    position: "Member",
+    image: "/editor8.jpg",
+    category: "science",
+  },
+  {
+    name: "Dr. Sylvester Ayinfite",
+    position: "Member",
+    image: "/editor9.jpg",
+    category: "Sience",
+  },
+  {
+    name: "Dr. Binta Bugaje",
+    position: "Treasurer",
+    image: "/editor0.jpg",
+    category: "Science",
+  },
+  {
+    name: "Dr. Ayo Fadele",
+    position: "Technical Assistant",
+    image: "/editor01.jpg",
+    category: "science",
+  },
+  {
+    name: "Dr. Fatrima Muhammad Jumare",
+    position: "Technical Assistant",
+    image: "/editor02.jpg",
+    category: "science",
+  },
+  {
+    name: "Dr. Aminu Shehu Yamusa",
+    position: "Technical Assistant",
+    image: "/editor03.jpg",
+    category: "science",
+  },
+  {
+    name: "Dr. Mark Madumelu",
+    position: "Technical Assistant",
+    image: "/editor04.jpg",
+    category: "science",
+  },
+  {
+    name: "Mr. Areo Oluwagbemiga",
+    position: "Technical Assistant",
+    image: "/editor05.jpg",
     category: "science",
   },
   {
     name: "Dr. Emily White",
     position: "Editorial Board Member",
-    department: "Mathematics",
-    image: "/editor6.jpg",
-    bio: "Focuses on applied mathematics in computational science.",
+    image: "/editor06.jpg",
+    category: "najosa",
+  },
+  {
+    name: "Dr. Emily White",
+    position: "Editorial Board Member",
+    image: "/editor07.jpg",
+    category: "najosa",
+  },
+  {
+    name: "Dr. Emily White",
+    position: "Editorial Board Member",
+    image: "/editor08.jpg",
+    category: "najosa",
+  },
+  {
+    name: "Dr. Emily White",
+    position: "Editorial Board Member",
+    image: "/editor09.jpg",
+    category: "najosa",
+  },
+  {
+    name: "Dr. Emily White",
+    position: "Editorial Board Member",
+    image: "/editor10.jpg",
     category: "najosa",
   },
 ];
@@ -74,56 +147,61 @@ export default function EditorialBoard() {
     router.push(`?tab=${tab}`);
   };
 
-  const filteredMembers = boardMembers.filter((m) => m.category === activeTab);
+  const filteredMembers = boardMembers.filter((m) => m.category.toLowerCase() === activeTab);
 
   return (
-    <div className="min-h-screen py-16 px-4">
+    <div className="min-h-screen bg-gray-50 py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-green-800 mb-4">
-          Editorial Board
-        </h1>
-        <p className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-12">
-          Meet the distinguished academics leading the Faculty of Science & NAJOSA journals, contributing their expertise to research and publication excellence.
-        </p>
-
-        {/* Tabs */}
-        <div className="flex justify-center space-x-4 mb-10">
-          {validTabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => handleTabChange(tab)}
-              className={clsx(
-                "relative px-6 py-3 text-base md:text-lg font-medium rounded-full transition-all duration-300",
-                activeTab === tab
-                  ? "bg-green-700 text-white shadow-md"
-                  : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-100"
-              )}
-            >
-              {tab === "science" ? "Faculty of Science" : "NAJOSA"}
-            </button>
-          ))}
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 leading-tight">
+            Meet Our Editorial Board
+          </h1>
+          <p className="mt-4 text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+            Distinguished academics driving innovation, research, and publishing excellence.
+          </p>
         </div>
 
-        {/* Members Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Tabs */}
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex bg-white shadow-md rounded-full p-2 space-x-2">
+            {validTabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => handleTabChange(tab)}
+                className={clsx(
+                  "px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all",
+                  activeTab === tab
+                    ? "bg-green-700 text-white shadow-md"
+                    : "text-gray-600 hover:bg-gray-100"
+                )}
+              >
+                {tab === "science" ? "Faculty of Scientific Research" : "NAJOSA"}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Board Members */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {filteredMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 p-6 text-center relative"
             >
               <div className="flex justify-center mb-4">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={96}
-                  height={96}
-                  className="rounded-full border-4 border-green-100 shadow-sm"
-                />
+                <div className="relative w-24 h-24">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-full border-4 border-green-300 group-hover:scale-105 transition-transform"
+                  />
+                </div>
               </div>
-              <h2 className="text-xl font-semibold text-center text-gray-800">{member.name}</h2>
-              <p className="text-green-700 text-center font-medium">{member.position}</p>
-              <p className="text-sm text-center text-gray-500">{member.department} Department</p>
-              <p className="mt-3 text-sm text-center text-gray-600 leading-relaxed">{member.bio}</p>
+              <h2 className="text-lg font-bold text-gray-800">{member.name}</h2>
+              <p className="text-green-700 mt-1 font-medium">{member.position}</p>
             </div>
           ))}
         </div>

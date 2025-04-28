@@ -6,13 +6,7 @@ export const departments = [
     description:
       "Focuses on computing technologies, AI, cybersecurity, and software engineering.",
       departmentMembers: [
-      { name: "Dr. Alice Johnson", specialization: "Artificial Intelligence" },
-      { name: "Prof. John Doe", specialization: "Cybersecurity" },
-      { name: "Dr. Mark Spencer", specialization: "Software Engineering" },
-      { name: "Dr. Grace Hopper", specialization: "Programming Languages" },
-      { name: "Dr. Ada Lovelace", specialization: "Theoretical Computer Science" },
-      { name: "Dr. Elon Turing", specialization: "Computational Theory" },
-      { name: "Dr. Lin Zhao", specialization: "Data Science" },
+      { name: "Dr. Abdulhakeem Suleimon", Possition: "H.O.D" },
     ],
     researchAreas: ["Machine Learning", "Blockchain Technology", "Big Data"],
     journals: [
@@ -26,13 +20,7 @@ export const departments = [
     description:
       "Exploring fundamental forces of nature, quantum mechanics, and astrophysics.",
     departmentMembers: [
-      { name: "Dr. Richard Feynman", specialization: "Quantum Mechanics" },
-      { name: "Dr. Marie Curie", specialization: "Radiation Physics" },
-      { name: "Dr. Neil Tyson", specialization: "Astrophysics" },
-      { name: "Dr. Lisa Randall", specialization: "Theoretical Physics" },
-      { name: "Dr. Albert Newton", specialization: "Classical Mechanics" },
-      { name: "Dr. Michio Kaku", specialization: "String Theory" },
-      { name: "Dr. Vera Rubin", specialization: "Galaxy Rotation" },
+      { name: "Dr. Musa Bello", Possition: "H.O.D" },
     ],
     researchAreas: ["Quantum Computing", "Particle Physics", "Space Exploration"],
     journals: [
@@ -46,13 +34,7 @@ export const departments = [
     description:
       "Research in organic chemistry, biochemistry, and material sciences.",
       departmentMembers: [
-      { name: "Dr. Linus Pauling", specialization: "Biochemistry" },
-      { name: "Dr. Dorothy Crowfoot", specialization: "Crystallography" },
-      { name: "Dr. Ahmed Zewail", specialization: "Femtochemistry" },
-      { name: "Dr. Marie Anne", specialization: "Organic Chemistry" },
-      { name: "Dr. Rosalind Franklin", specialization: "Molecular Chemistry" },
-      { name: "Dr. George Whitesides", specialization: "Nanochemistry" },
-      { name: "Dr. Angela Merkel", specialization: "Physical Chemistry" },
+      { name: "Dr. Abdullahi Abdulkadir", Possition: "H.O.D" },
     ],
     researchAreas: ["Biochemical Engineering", "Drug Development", "Nanotechnology"],
     journals: [
@@ -61,18 +43,12 @@ export const departments = [
     ],
   },
   {
-    id: "chemistry",
-    name: "Department of Chemistry",
+    id: "Biology",
+    name: "Department of Biology",
     description:
-      "Research in organic chemistry, biochemistry, and material sciences.",
+      "Studies in genetics, microbiology, and ecology.",
       departmentMembers: [
-      { name: "Dr. Linus Pauling", specialization: "Biochemistry" },
-      { name: "Dr. Dorothy Crowfoot", specialization: "Crystallography" },
-      { name: "Dr. Ahmed Zewail", specialization: "Femtochemistry" },
-      { name: "Dr. Marie Anne", specialization: "Organic Chemistry" },
-      { name: "Dr. Rosalind Franklin", specialization: "Molecular Chemistry" },
-      { name: "Dr. George Whitesides", specialization: "Nanochemistry" },
-      { name: "Dr. Angela Merkel", specialization: "Physical Chemistry" },
+      { name: "Dr. S'adatu Lawal B.", Possition: "H.O.D" },
     ],
     researchAreas: ["Biochemical Engineering", "Drug Development", "Nanotechnology"],
     journals: [
@@ -81,83 +57,31 @@ export const departments = [
     ],
   },
   {
-    id: "chemistry",
-    name: "Department of Chemistry",
+    id: "Intergrated Science",
+    name: "Department of Intergrated Science",
     description:
       "Research in organic chemistry, biochemistry, and material sciences.",
       departmentMembers: [
-      { name: "Dr. Linus Pauling", specialization: "Biochemistry" },
-      { name: "Dr. Dorothy Crowfoot", specialization: "Crystallography" },
-      { name: "Dr. Ahmed Zewail", specialization: "Femtochemistry" },
-      { name: "Dr. Marie Anne", specialization: "Organic Chemistry" },
-      { name: "Dr. Rosalind Franklin", specialization: "Molecular Chemistry" },
-      { name: "Dr. George Whitesides", specialization: "Nanochemistry" },
-      { name: "Dr. Angela Merkel", specialization: "Physical Chemistry" },
+      { name: "Dr. (Mrs) Egwu G.N", Possition: "H.O.D" },
     ],
-    researchAreas: ["Biochemical Engineering", "Drug Development", "Nanotechnology"],
+    researchAreas: ["", "", ""],
     journals: [
-      { title: "Advancements in Biochemistry", author: "Dr. Linus Pauling", date: "Nov 2023" },
-      { title: "New Trends in Nanotechnology", author: "Dr. Dorothy Crowfoot", date: "Oct 2023" },
+      { title: "", author: "", date: "" },
+      { title: "", author: "", date: "" },
     ],
   },
   {
-    id: "chemistry",
-    name: "Department of Chemistry",
+    id: "physical and Health Education",
+    name: "Department of Physical and Health Education",
     description:
       "Research in organic chemistry, biochemistry, and material sciences.",
       departmentMembers: [
-      { name: "Dr. Linus Pauling", specialization: "Biochemistry" },
-      { name: "Dr. Dorothy Crowfoot", specialization: "Crystallography" },
-      { name: "Dr. Ahmed Zewail", specialization: "Femtochemistry" },
-      { name: "Dr. Marie Anne", specialization: "Organic Chemistry" },
-      { name: "Dr. Rosalind Franklin", specialization: "Molecular Chemistry" },
-      { name: "Dr. George Whitesides", specialization: "Nanochemistry" },
-      { name: "Dr. Angela Merkel", specialization: "Physical Chemistry" },
+      { name: "Dr. Amua Lember", Possition: "H.O.D" },
     ],
-    researchAreas: ["Biochemical Engineering", "Drug Development", "Nanotechnology"],
+    researchAreas: ["", "", ""],
     journals: [
-      { title: "Advancements in Biochemistry", author: "Dr. Linus Pauling", date: "Nov 2023" },
-      { title: "New Trends in Nanotechnology", author: "Dr. Dorothy Crowfoot", date: "Oct 2023" },
-    ],
-  },
-  {
-    id: "chemistry",
-    name: "Department of Chemistry",
-    description:
-      "Research in organic chemistry, biochemistry, and material sciences.",
-      departmentMembers: [
-      { name: "Dr. Linus Pauling", specialization: "Biochemistry" },
-      { name: "Dr. Dorothy Crowfoot", specialization: "Crystallography" },
-      { name: "Dr. Ahmed Zewail", specialization: "Femtochemistry" },
-      { name: "Dr. Marie Anne", specialization: "Organic Chemistry" },
-      { name: "Dr. Rosalind Franklin", specialization: "Molecular Chemistry" },
-      { name: "Dr. George Whitesides", specialization: "Nanochemistry" },
-      { name: "Dr. Angela Merkel", specialization: "Physical Chemistry" },
-    ],
-    researchAreas: ["Biochemical Engineering", "Drug Development", "Nanotechnology"],
-    journals: [
-      { title: "Advancements in Biochemistry", author: "Dr. Linus Pauling", date: "Nov 2023" },
-      { title: "New Trends in Nanotechnology", author: "Dr. Dorothy Crowfoot", date: "Oct 2023" },
-    ],
-  },
-  {
-    id: "chemistry",
-    name: "Department of Chemistry",
-    description:
-      "Research in organic chemistry, biochemistry, and material sciences.",
-      departmentMembers: [
-      { name: "Dr. Linus Pauling", specialization: "Biochemistry" },
-      { name: "Dr. Dorothy Crowfoot", specialization: "Crystallography" },
-      { name: "Dr. Ahmed Zewail", specialization: "Femtochemistry" },
-      { name: "Dr. Marie Anne", specialization: "Organic Chemistry" },
-      { name: "Dr. Rosalind Franklin", specialization: "Molecular Chemistry" },
-      { name: "Dr. George Whitesides", specialization: "Nanochemistry" },
-      { name: "Dr. Angela Merkel", specialization: "Physical Chemistry" },
-    ],
-    researchAreas: ["Biochemical Engineering", "Drug Development", "Nanotechnology"],
-    journals: [
-      { title: "Advancements in Biochemistry", author: "Dr. Linus Pauling", date: "Nov 2023" },
-      { title: "New Trends in Nanotechnology", author: "Dr. Dorothy Crowfoot", date: "Oct 2023" },
+      { title: "", author: "", date: "" },
+      { title: "", author: "", date: "" },
     ],
   },
 

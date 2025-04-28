@@ -3,7 +3,7 @@ import { FaBookOpen, FaRocket, FaSearch } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className=" ">
       {/* Science SVG Background */}
       <div className="absolute inset-0 bg-[url('/science.jpg')] bg-cover opacity-10"></div>
 
@@ -13,7 +13,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
           <p className="mt-4 font-bold text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
           <a
-            href="/journals"
+            href="/archives"
             className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
           >
             Browse Journals
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* Featured Journals */}
-      <section className="mx-4 mt-26 md:mx-0">
+      <section className="mx-4 mt-26 py-6 md:mx-0">
         <h2 className="text-3xl md-10 font-bold text-center">Latest Research Journals</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {[
