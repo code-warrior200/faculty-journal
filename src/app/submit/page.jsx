@@ -5,7 +5,6 @@ export default function Submit() {
   const [formData, setFormData] = useState({ 
     title: "", 
     author: "", 
-    email: "", 
     file: null 
   });
 
@@ -14,7 +13,6 @@ export default function Submit() {
     const data = new FormData();
     data.append("title", formData.title);
     data.append("author", formData.author);
-    data.append("email", formData.email);
     data.append("file", formData.file);
 
     await fetch("/api/submit", {
@@ -55,8 +53,8 @@ export default function Submit() {
           />
         </div>
 
-        {/* Author Email Input */}
-        <div>
+        {/* Author Email Input
+          <div>
           <label className="block text-gray-700 font-medium">Author Email</label>
           <input 
             type="email" 
@@ -66,6 +64,8 @@ export default function Submit() {
             onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
           />
         </div>
+        */}
+        
 
         {/* File Upload */}
         <div>
