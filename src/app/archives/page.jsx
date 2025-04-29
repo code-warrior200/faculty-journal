@@ -39,9 +39,9 @@ export default function Journals() {
   const uniqueDepartments = [...new Set(journals.map((journal) => journal.department))];
 
   return (
-    <div className="max-w-7xl mx-auto mt-8 p-6">
+    <div className="max-w-7xl bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat rounded-b-4xl shadow-gray-200 mx-auto mt-10 p-6">
       {/* Header */}
-      <h1 className="text-4xl font-bold text-center text-green-600 mb-8">📚 Journals</h1>
+      <h1 className="text-4xl font-bold text-center text-green-600 mb-8">Journals</h1>
 
       {/* Filters */}
       <div className="flex items-center justify-between mb-10">

@@ -8,7 +8,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-[url('/science.jpg')] bg-cover opacity-10"></div>
 
       {/* Hero Section with Background Image */}
-      <section className="text-center mt-22 py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
+      <section className="text-center mt-22 px-20 py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
           <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
           <p className="mt-4 font-bold text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
@@ -22,7 +22,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="text-center mx-4 mt-48 md:mx-0 text-black">
+      <section className="text-center mx-4 mt-56 py-10 md:mx-0 text-black">
         <h2 className="text-3xl font-bold text-green-600">Why Choose Us?</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
