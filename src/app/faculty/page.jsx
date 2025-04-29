@@ -29,47 +29,47 @@ export default function Home() {
             {/* Science SVG Background */}
             <div className="absolute inset-0 bg-[url('/science.jpg')] bg-cover opacity-10"></div>
 
-            {/* Hero Section */}
-            <section className="text-center mt-22 py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
-                <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
-                    <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
-                    <p className="mt-4 font-bold text-lg">Federal University Of Education Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
-                    <a
-                        href="/archives"
-                        className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
-                    >
-                        Browse Journals
-                    </a>
-                </div>
-            </section>
+      {/* Hero Section with Background Image */}
+      <section className="text-center mt-22 px-20 py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
+        <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
+          <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
+          <p className="mt-4 font-bold text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
+          <a
+            href="/archives"
+            className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
+          >
+            Browse Journals
+          </a>
+        </div>
+      </section>
 
-            {/* Features Section */}
-            <section className="text-center mx-4 mt-48 md:mx-0 text-black">
-                <h2 className="text-3xl font-bold text-green-600">Why Choose Us?</h2>
-                <div className="grid md:grid-cols-3 gap-6 mt-6">
-                    <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-                        <span className="text-green-700 text-4xl mb-3">
-                            <FaBookOpen />
-                        </span>
-                        <h3 className="text-xl font-bold">Open Access</h3>
-                        <p className="text-gray-600 mt-2">All research papers are freely available to everyone.</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-                        <span className="text-green-700 text-4xl mb-3">
-                            <FaRocket />
-                        </span>
-                        <h3 className="text-xl font-bold">Publish When Verified</h3>
-                        <p className="text-gray-600 mt-2">Admin approval is required before publishing after manuscript is submitted.</p>
-                    </div>
-                    <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
-                        <span className="text-green-700 text-4xl mb-3">
-                            <FaSearch />
-                        </span>
-                        <h3 className="text-xl font-bold">Search & Filter</h3>
-                        <p className="text-gray-600 mt-2">Find journals by category, department, or publication date.</p>
-                    </div>
-                </div>
-            </section>
+      {/* Features Section */}
+      <section className="text-center mx-4 mt-56 py-10 md:mx-0 text-black">
+        <h2 className="text-3xl font-bold text-green-600">Why Choose Us?</h2>
+        <div className="grid md:grid-cols-3 gap-6 mt-6">
+          <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
+            <span className="text-green-700 text-4xl mb-3">
+              <FaBookOpen />
+            </span>
+            <h3 className="text-xl font-bold">Open Access</h3>
+            <p className="text-gray-600 mt-2">All research papers are freely available to everyone.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
+            <span className="text-green-700 text-4xl mb-3">
+              <FaRocket />
+            </span>
+            <h3 className="text-xl font-bold">Publish When Verified</h3>
+            <p className="text-gray-600 mt-2">Admin approval is required before publishing after manuscript is submitted.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
+            <span className="text-green-700 text-4xl mb-3">
+              <FaSearch />
+            </span>
+            <h3 className="text-xl font-bold">Search & Filter</h3>
+            <p className="text-gray-600 mt-2">Find journals by category, department, or publication date.</p>
+          </div>
+        </div>
+      </section>
 
             {/* Featured Journals */}
             <section className="mx-4 mt-26 py-6 md:mx-0 text-black">

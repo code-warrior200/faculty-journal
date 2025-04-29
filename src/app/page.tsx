@@ -21,9 +21,15 @@ export default function Home() {
           <p className="text-green-200 mt-6 text-lg md:text-2xl max-w-2xl mx-auto animate-fade-up delay-150">
             Innovate, Connect, and Excel with Our Global Community.
           </p>
-          <button className="mt-8 px-8 py-3 bg-green-600 hover:bg-green-700 transition rounded-full text-white text-lg font-semibold shadow-lg animate-fade-up delay-300">
+          <a
+            href="/faculty"
+            className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
+          >
+            Learn More
+          </a>
+          {/* <button className="mt-8 px-8 py-3 bg-green-600 hover:bg-green-700 transition rounded-full text-white text-lg font-semibold shadow-lg animate-fade-up delay-300">
             Explore Programs
-          </button>
+          </button> */}
         </div>
       </section>
 
