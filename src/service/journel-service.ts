@@ -10,3 +10,8 @@ export const fetchAllJournalApi = async () => {
     const response = await apiClient.get('/journal/');
     return response.data
 }
+
+export const downloadApi = async (data: any) => {
+    const response = await apiClient.post(`/download/${data.journalId}`, data);
+    return response.data
+} 

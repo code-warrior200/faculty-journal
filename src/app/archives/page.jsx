@@ -96,8 +96,8 @@ export default function Journals() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredJournals.map((journal) => (
             <JournalCard
-              key={journal.id}
-              id={journal.id}
+              key={journal._id}
+              id={journal._id}
               title={journal.title}
               authorName={journal.authorName}
               department={journal.department}
@@ -105,6 +105,7 @@ export default function Journals() {
               downloads={journal.downloads}
               views={journal.views}
               posterUrl={journal.posterUrl}
+              fileUrl={journal.fileUrl}
             />
           ))}
         </div>
