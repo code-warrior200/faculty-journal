@@ -26,7 +26,7 @@ export default function JournalCard({
   return (
     <div
       key={id}
-      className="bg-white border rounded-lg shadow-md hover:shadow-lg transition flex flex-col overflow-hidden"
+      className="bg-white rounded-lg shadow-md hover:shadow-lg transition flex flex-col overflow-hidden"
     >
       {/* Poster */}
       <img
