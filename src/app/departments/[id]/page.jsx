@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useParams } from "next/navigation";
-import { departments } from "../departmentData";
+import { departments } from "@/constant/data";
 
 const DepartmentDetails = () => {
   const { id } = useParams();
@@ -19,10 +19,10 @@ const DepartmentDetails = () => {
     <div className="max-w-6xl mx-auto px-6 py-16">
       {/* Department Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-green-600 mb-4">
           {department.name}
         </h1>
-        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+        <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
           {department.description}
         </p>
       </div>
@@ -49,10 +49,10 @@ const DepartmentDetails = () => {
 
       {/* Research Areas Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="text-3xl font-bold text-green-600 mb-6">
           Research Areas
         </h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <ul className="list-disc list-inside text-gray-400 space-y-2">
           {department.researchAreas.map((area, index) => (
             <li key={index} className="text-lg">{area}</li>
           ))}
@@ -61,7 +61,7 @@ const DepartmentDetails = () => {
 
       {/* Recent Journals Section */}
       <section>
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="text-3xl font-bold text-green-600 mb-6">
           Recent Journals
         </h2>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">

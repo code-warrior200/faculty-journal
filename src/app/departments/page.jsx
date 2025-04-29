@@ -1,5 +1,5 @@
 "use client";
-import { departments } from "./departmentData";
+import { departments } from "@/constant/data";
 import DepartmentCard from "@/components/DepartmentCard";
 
 export default function DepartmentsPage() {
@@ -7,10 +7,10 @@ export default function DepartmentsPage() {
     <div className="max-w-7xl mx-auto px-6 py-20">
       {/* Page Header */}
       <div className="text-center mb-16">
-        <h1 className="text-5xl font-extrabold text-green-700 mb-4">
+        <h1 className="text-5xl font-extrabold text-green-600 mb-4">
           Explore Our Departments
         </h1>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
           Discover the diverse fields of study offered by our faculty, driven by excellence and innovation.
         </p>
       </div>

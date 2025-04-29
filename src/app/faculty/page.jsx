@@ -22,8 +22,8 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="text-center mx-4 mt-48 md:mx-0">
-        <h2 className="text-3xl font-bold">Why Choose Us?</h2>
+      <section className="text-center mx-4 mt-48 md:mx-0 text-black">
+        <h2 className="text-3xl font-bold text-green-600">Why Choose Us?</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           <div className="bg-white p-6 rounded-lg shadow flex flex-col items-center">
             <span className="text-green-700 text-4xl mb-3">
@@ -50,8 +50,8 @@ export default function Home() {
       </section>
 
       {/* Featured Journals */}
-      <section className="mx-4 mt-26 py-6 md:mx-0">
-        <h2 className="text-3xl md-10 font-bold text-center">Latest Research Journals</h2>
+      <section className="mx-4 mt-26 py-6 md:mx-0 text-black">
+        <h2 className="text-3xl md-10 font-bold text-center text-green-600">Latest Research Journals</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {[
             { title: "Advances in Quantum Physics", category: "Physics", description: "Exploring quantum mechanics and its applications." },

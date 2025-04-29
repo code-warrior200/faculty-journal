@@ -29,7 +29,7 @@ export default function Home() {
 
       {/* Leadership Section */}
       <section className="px-6 md:px-12 pt-20 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-green-600 mb-16">
           Meet Our Leadership
         </h2>
 

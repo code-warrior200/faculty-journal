@@ -1,90 +1,154 @@
 "use client";
+
 import { useState } from "react";
+import { uploadJournalApi } from '@/service/journel-service';
+import FormInput from '@/components/shared/input'
+import FormTextarea from '@/components/shared/textarea'
+import FormFileUpload from '@/components/shared/upload-input'
+import { toast } from 'react-toastify';
 
 export default function Submit() {
-  const [formData, setFormData] = useState({ 
-    title: "", 
-    author: "", 
-    email: "", 
-    file: null 
+  const [formData, setFormData] = useState({
+    title: "",
+    authorName: "",
+    description: "",
+    department: "",
+    fileType: "",
+    journalPoster: null,
+    journalFile: null,
   });
+
+  const [loading, setLoading] = useState(false); // <-- Loader state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = new FormData();
-    data.append("title", formData.title);
-    data.append("author", formData.author);
-    data.append("email", formData.email);
-    data.append("file", formData.file);
+    setLoading(true);
+  
+    const form = new FormData();
+    form.append('title', formData.title);
+    form.append('authorName', formData.authorName);
+    form.append('description', formData.description);
+    form.append('department', formData.department);
+    form.append('fileType', formData.fileType || "pdf");
+    form.append('journalPoster', formData.journalPoster);
+    form.append('journalFile', formData.journalFile);
+  
+    try {
+      const response = await uploadJournalApi(form);
+  
+      console.log(response);
+  
+      if (response?.journal) {
+        setFormData({
+          title: "",
+          authorName: "",
+          description: "",
+          department: "",
+          fileType: "",
+          journalPoster: null,
+          journalFile: null,
+        });
+  
+        toast.success("Journal submitted successfully!");
+      }
+    } catch (error) {
+      const errorMessage = error?.response?.data?.message || "Something went wrong!";
+      toast.error(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
 
-    await fetch("/api/submit", {
-      method: "POST",
-      body: data,
-    });
-
-    alert("Manuscript submitted successfully!");
+  const handleJournalFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const fileType = file.name.split(".").pop();
+      setFormData((prev) => ({
+        ...prev,
+        journalFile: file,
+        fileType: fileType.toLowerCase(),
+      }));
+    }
   };
 
   return (
     <div className="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg mt-10">
-      <h1 className="text-3xl font-bold text-center text-gray-800">📄 Submit Your Manuscript</h1>
-      <p className="text-center text-gray-500 mt-2">Fill in the details below and upload your manuscript.</p>
+      <h1 className="text-3xl font-bold text-center text-gray-800">📄 Submit Your Journal</h1>
+      <p className="text-center text-gray-500 mt-2">
+        Fill in the details below and upload your journal.
+      </p>
 
       <form className="mt-6 space-y-6" onSubmit={handleSubmit}>
-        {/* Title Input */}
+        <FormInput
+          label="Title"
+          type="text"
+          placeholder="Enter journal title"
+          required
+          value={formData.title}
+          onChange={(e) => setFormData((prev) => ({ ...prev, title: e.target.value }))}
+        />
+
+        <FormInput
+          label="Author Name"
+          type="text"
+          placeholder="Enter your name"
+          required
+          value={formData.authorName}
+          onChange={(e) => setFormData((prev) => ({ ...prev, authorName: e.target.value }))}
+        />
+
+        <FormTextarea
+          label="Description"
+          placeholder="Enter a description"
+          required
+          rows={4}
+          value={formData.description}
+          onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
+        />
+
         <div>
-          <label className="block text-gray-700 font-medium">Title</label>
-          <input 
-            type="text" 
-            placeholder="Enter manuscript title" 
-            className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
-            required 
-            onChange={(e) => setFormData({ ...formData, title: e.target.value })} 
-          />
+          <label className="block text-gray-700 font-medium">Department</label>
+          <select
+            required
+            value={formData.department}
+            onChange={(e) => setFormData((prev) => ({ ...prev, department: e.target.value }))}
+            className="mt-2 w-full p-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Select Department</option>
+            <option value="Science">Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Arts">Arts</option>
+            <option value="Business">Business</option>
+          </select>
         </div>
 
-        {/* Author Name Input */}
-        <div>
-          <label className="block text-gray-700 font-medium">Author Name</label>
-          <input 
-            type="text" 
-            placeholder="Enter your name" 
-            className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
-            required 
-            onChange={(e) => setFormData({ ...formData, author: e.target.value })} 
-          />
-        </div>
+        <FormFileUpload
+          label="Upload Poster (Image)"
+          accept="image/*"
+          required
+          onChange={(e) => setFormData((prev) => ({ ...prev, journalPoster: e.target.files[0] }))}
+        />
 
-        {/* Author Email Input */}
-        <div>
-          <label className="block text-gray-700 font-medium">Author Email</label>
-          <input 
-            type="email" 
-            placeholder="Enter your email" 
-            className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
-            required 
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
-          />
-        </div>
+        <FormFileUpload
+          label="Upload Journal (PDF/DOCX)"
+          accept=".pdf,.doc,.docx"
+          required
+          onChange={handleJournalFileChange}
+        />
 
-        {/* File Upload */}
-        <div>
-          <label className="block text-gray-700 font-medium">Upload Manuscript (PDF/DOCX)</label>
-          <input 
-            type="file" 
-            className="mt-2 w-full p-3 border border-gray-300 rounded-lg bg-gray-100 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-white file:bg-green-500 hover:file:bg-green-600 cursor-pointer" 
-            required 
-            accept=".pdf,.doc,.docx" 
-            onChange={(e) => setFormData({ ...formData, file: e.target.files[0] })} 
-          />
-        </div>
+        {formData.fileType && (
+          <p className="mt-2 text-sm text-gray-500">
+            Detected file type: <span className="font-semibold">{formData.fileType}</span>
+          </p>
+        )}
 
-        {/* Submit Button */}
-        <button 
-          type="submit" 
-          className="w-full bg-green-500 text-white py-3 rounded-lg font-bold text-lg hover:bg-green-600 transition duration-300"
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-green-500 text-white py-3 rounded-lg text-lg hover:bg-green-600 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Submit Manuscript
+          {loading ? "Submitting..." : "Submit Journal"}
         </button>
       </form>
     </div>

@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <img src="/image/logo.png" alt="Faculty Journal Logo" className="h-10 w-10 object-contain" />
-          <span className="text-2xl font-bold text-green-700">Faculty Of Science</span>
+          <h3 className="text-2xl font-bold text-green-600">Faculty Of Science</h3>
         </Link>
 
         {/* Desktop Navigation */}
@@ -32,7 +32,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.path}
-              className="text-gray-700 hover:text-green-700 transition-colors duration-300 text-lg font-medium"
+              className="text-gray-700 hover:text-green-700 transition-colors duration-300 text-sm font-medium"
             >
               {link.name}
             </Link>

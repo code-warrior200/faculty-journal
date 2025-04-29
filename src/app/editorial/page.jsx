@@ -3,130 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import clsx from "clsx";
+import { boardMembers } from "@/constant/data";
 
-const boardMembers = [
-  {
-    name: "Dr. Saeed Gbolahan Adewusi",
-    position: "Editor in-Chief",
-    image: "/editor1.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. A.D. OnuFCSN, MICCON",
-    position: "Editor",
-    image: "/editor2.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. H.A Sulaimon",
-    position: "Member",
-    image: "/editor3.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. A. Maikano",
-    position: "Member",
-    image: "/editor4.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Jaffar Aliyu",
-    position: "Member",
-    image: "/editor5.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Zubairu Ahmed",
-    position: "Member",
-    image: "/editor6.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Abdulahi Lawal",
-    position: "Member",
-    image: "/editor7.jpg",
-    category: "science",
-  },
-  {
-    name: "Prof. V.O Ajibola",
-    position: "Member",
-    image: "/editor8.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Sylvester Ayinfite",
-    position: "Member",
-    image: "/editor9.jpg",
-    category: "Sience",
-  },
-  {
-    name: "Dr. Binta Bugaje",
-    position: "Treasurer",
-    image: "/editor0.jpg",
-    category: "Science",
-  },
-  {
-    name: "Dr. Ayo Fadele",
-    position: "Technical Assistant",
-    image: "/editor01.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Fatrima Muhammad Jumare",
-    position: "Technical Assistant",
-    image: "/editor02.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Aminu Shehu Yamusa",
-    position: "Technical Assistant",
-    image: "/editor03.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Mark Madumelu",
-    position: "Technical Assistant",
-    image: "/editor04.jpg",
-    category: "science",
-  },
-  {
-    name: "Mr. Areo Oluwagbemiga",
-    position: "Technical Assistant",
-    image: "/editor05.jpg",
-    category: "science",
-  },
-  {
-    name: "Dr. Emily White",
-    position: "Editorial Board Member",
-    image: "/editor06.jpg",
-    category: "najosa",
-  },
-  {
-    name: "Dr. Emily White",
-    position: "Editorial Board Member",
-    image: "/editor07.jpg",
-    category: "najosa",
-  },
-  {
-    name: "Dr. Emily White",
-    position: "Editorial Board Member",
-    image: "/editor08.jpg",
-    category: "najosa",
-  },
-  {
-    name: "Dr. Emily White",
-    position: "Editorial Board Member",
-    image: "/editor09.jpg",
-    category: "najosa",
-  },
-  {
-    name: "Dr. Emily White",
-    position: "Editorial Board Member",
-    image: "/editor10.jpg",
-    category: "najosa",
-  },
-];
 
 export default function EditorialBoard() {
   const searchParams = useSearchParams();
@@ -150,14 +28,14 @@ export default function EditorialBoard() {
   const filteredMembers = boardMembers.filter((m) => m.category.toLowerCase() === activeTab);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16 px-4">
+    <div className="min-h-screen py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-green-600 leading-tight">
             Meet Our Editorial Board
           </h1>
-          <p className="mt-4 text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
             Distinguished academics driving innovation, research, and publishing excellence.
           </p>
         </div>
@@ -169,13 +47,7 @@ export default function EditorialBoard() {
               <button
                 key={tab}
                 onClick={() => handleTabChange(tab)}
-                className={clsx(
-                  "px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all",
-                  activeTab === tab
-                    ? "bg-green-700 text-white shadow-md"
-                    : "text-gray-600 hover:bg-gray-100"
-                )}
-              >
+                className={`px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all ${activeTab === tab ? "bg-green-700 text-white shadow-md" : "text-gray-600 hover:bg-gray-100"}`}>
                 {tab === "science" ? "Faculty of Scientific Research" : "NAJOSA"}
               </button>
             ))}
