@@ -3,6 +3,7 @@ import { FaBookOpen, FaRocket, FaSearch } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { fetchAllJournalApi } from '@/service/journel-service';
 import JournalCard from "@/components/journal-card";
+import { Journal  } from '@/interface/types'
 
 export default function Home() {
     const [journals, setJournals] = useState([]);
@@ -21,8 +22,9 @@ export default function Home() {
     }, []);
   
     const filteredJournals = journals
-        .sort((a, b) => b.downloads - a.downloads)
-        .slice(0, 6);
+    .sort((a: Journal, b: Journal) => b.downloads - a.downloads)
+    .slice(0, 6);
+  
   
     return (
         <div className=" ">
@@ -77,10 +79,10 @@ export default function Home() {
                 {loading && <p className="text-center text-gray-500">Loading journals...</p>}
                 {!loading && (
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredJournals.map((journal) => (
+                        {filteredJournals.map((journal: Journal, index) => (
                             <JournalCard
-                                key={journal.id}
-                                id={journal.id}
+                                key={index}
+                                id={journal._id!}
                                 title={journal.title}
                                 authorName={journal.authorName}
                                 department={journal.department}

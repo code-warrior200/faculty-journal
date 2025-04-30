@@ -1,31 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
 import Image from "next/image";
 import { boardMembers } from "@/constant/data";
 
-
 export default function EditorialBoard() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
   const validTabs = ["science", "najosa"];
+  const [activeTab, setActiveTab] = useState("science");
 
-  const tabParam = searchParams.get("tab");
-  const defaultTab = validTabs.includes(tabParam) ? tabParam : "science";
-
-  const [activeTab, setActiveTab] = useState(defaultTab);
-
-  useEffect(() => {
-    setActiveTab(defaultTab);
-  }, [tabParam]);
-
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    router.push(`?tab=${tab}`);
-  };
-
-  const filteredMembers = boardMembers.filter((m) => m.category.toLowerCase() === activeTab);
+  const filteredMembers = boardMembers.filter(
+    (m) => m.category.toLowerCase() === activeTab
+  );
 
   return (
     <div className="min-h-screen py-16 px-4">
@@ -46,9 +31,16 @@ export default function EditorialBoard() {
             {validTabs.map((tab) => (
               <button
                 key={tab}
-                onClick={() => handleTabChange(tab)}
-                className={`px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all ${activeTab === tab ? "bg-green-700 text-white shadow-md" : "text-gray-600 hover:bg-gray-100"}`}>
-                {tab === "science" ? "Faculty of Scientific Research" : "NAJOSA"}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all ${
+                  activeTab === tab
+                    ? "bg-green-700 text-white shadow-md"
+                    : "text-gray-600 hover:bg-gray-100"
+                }`}
+              >
+                {tab === "science"
+                  ? "Faculty of Scientific Research"
+                  : "NAJOSA"}
               </button>
             ))}
           </div>

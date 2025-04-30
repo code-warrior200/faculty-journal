@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-import Link from "next/link";
 
-export default function DepartmentCard({ department }) {
+export default function DepartmentCard({ department }: any) {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 transition hover:shadow-lg">
       <a href={`/departments/${department.id}`} className="text-2xl font-semibold text-green-500">{department.name}</a>
@@ -10,7 +10,7 @@ export default function DepartmentCard({ department }) {
       <div className="mt-4">
         <h3 className="font-semibold text-gray-800">Research Areas:</h3>
         <ul className="list-disc pl-5 text-gray-600">
-          {department.researchAreas.map((area, index) => (
+          {department.researchAreas.map((area: any, index: number) => (
             <li key={index}>{area}</li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -28,10 +29,10 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="/" className="text-gray-400 hover:text-white transition">Home</a></li>
-            <li><a href="/departments" className="text-gray-400 hover:text-white transition">Departments</a></li>
-            <li><a href="/archives" className="text-gray-400 hover:text-white transition">Journals</a></li>
-            <li><a href="/faculty" className="text-gray-400 hover:text-white transition">Faculty Journal</a></li>
+            <li><Link href="/" className="text-gray-400 hover:text-white transition">Home</Link></li>
+            <li><Link href="/departments" className="text-gray-400 hover:text-white transition">Departments</Link></li>
+            <li><Link href="/archives" className="text-gray-400 hover:text-white transition">Journals</Link></li>
+            <li><Link href="/faculty" className="text-gray-400 hover:text-white transition">Faculty Journal</Link></li>
           </ul>
         </div>
 

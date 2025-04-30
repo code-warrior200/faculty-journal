@@ -1,14 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useState } from "react";
 import { uploadJournalApi } from '@/service/journel-service';
-import FormInput from '@/components/shared/input'
-import FormTextarea from '@/components/shared/textarea'
-import FormFileUpload from '@/components/shared/upload-input'
+import FormInput from '@/components/shared/input';
+import FormTextarea from '@/components/shared/textarea';
+import FormFileUpload from '@/components/shared/upload-input';
 import { toast } from 'react-toastify';
 
 export default function Submit() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    title: string;
+    authorName: string;
+    description: string;
+    department: string;
+    fileType: string;
+    journalPoster: File | null;
+    journalFile: File | null;
+  }>({
     title: "",
     authorName: "",
     description: "",
@@ -18,26 +27,31 @@ export default function Submit() {
     journalFile: null,
   });
 
-  const [loading, setLoading] = useState(false); // <-- Loader state
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
-  
+
     const form = new FormData();
     form.append('title', formData.title);
     form.append('authorName', formData.authorName);
     form.append('description', formData.description);
     form.append('department', formData.department);
     form.append('fileType', formData.fileType || "pdf");
-    form.append('journalPoster', formData.journalPoster);
-    form.append('journalFile', formData.journalFile);
-  
+
+    if (formData.journalPoster) {
+      form.append('journalPoster', formData.journalPoster);
+    }
+
+    if (formData.journalFile) {
+      form.append('journalFile', formData.journalFile);
+    }
+
     try {
       const response = await uploadJournalApi(form);
-  
       console.log(response);
-  
+
       if (response?.journal) {
         setFormData({
           title: "",
@@ -48,26 +62,25 @@ export default function Submit() {
           journalPoster: null,
           journalFile: null,
         });
-  
+
         toast.success("Journal submitted successfully!");
       }
-    } catch (error) {
+    } catch (error: any) {
       const errorMessage = error?.response?.data?.message || "Something went wrong!";
       toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
   };
-  
 
-  const handleJournalFileChange = (e) => {
-    const file = e.target.files[0];
+  const handleJournalFileChange = (e: any) => {
+    const file = e.target.files?.[0];
     if (file) {
       const fileType = file.name.split(".").pop();
       setFormData((prev) => ({
         ...prev,
         journalFile: file,
-        fileType: fileType.toLowerCase(),
+        fileType: fileType?.toLowerCase() || "pdf",
       }));
     }
   };
@@ -86,7 +99,7 @@ export default function Submit() {
           placeholder="Enter journal title"
           required
           value={formData.title}
-          onChange={(e) => setFormData((prev) => ({ ...prev, title: e.target.value }))}
+          onChange={(e: any) => setFormData((prev) => ({ ...prev, title: e.target.value }))}
         />
 
         <FormInput
@@ -95,7 +108,7 @@ export default function Submit() {
           placeholder="Enter your name"
           required
           value={formData.authorName}
-          onChange={(e) => setFormData((prev) => ({ ...prev, authorName: e.target.value }))}
+          onChange={(e: any) => setFormData((prev) => ({ ...prev, authorName: e.target.value }))}
         />
 
         <FormTextarea
@@ -104,7 +117,7 @@ export default function Submit() {
           required
           rows={4}
           value={formData.description}
-          onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
+          onChange={(e: any) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
         />
 
         <div>
@@ -127,7 +140,7 @@ export default function Submit() {
           label="Upload Poster (Image)"
           accept="image/*"
           required
-          onChange={(e) => setFormData((prev) => ({ ...prev, journalPoster: e.target.files[0] }))}
+          onChange={(e: any) => setFormData((prev) => ({ ...prev, journalPoster: e.target.files?.[0] || null }))}
         />
 
         <FormFileUpload
