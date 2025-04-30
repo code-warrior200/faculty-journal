@@ -39,21 +39,21 @@ export default function Journals() {
   const uniqueDepartments = [...new Set(journals.map((journal) => journal.department))];
 
   return (
-    <div className="max-w-7xl bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat rounded-b-4xl shadow-gray-200 mx-auto mt-10 p-6">
+    <div className="max-w-7xl  mt-10 p-6">
       {/* Header */}
       <h1 className="text-4xl font-bold text-center text-green-600 mb-8">Journals</h1>
 
       {/* Filters */}
-      <div className="flex items-center justify-between mb-10">
+      <div className="flex items-center py-20 px-10 bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat mx-auto justify-between mb-10">
         
         {/* Search Bar */}
         <div className="w-full md:w-[35%]">
-          <div className="relative">
+          <div className="relative  rounded-lg shadow-sm">
             <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
             <input
               type="text"
               placeholder="Search journals..."
-              className="w-full pl-12 pr-4 py-3 rounded-xl border outline-none border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition text-white shadow-sm"
+              className="w-full pl-12 pr-4 py-3 bg-white rounded-xl border outline-none border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition text-gray-500 shadow-sm"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />

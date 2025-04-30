@@ -6,7 +6,7 @@ export default function Home() {
     <div className="relative overflow-hidden pb-20">
 
       {/* Hero Section */}
-      <section className="relative h-[500px] md:h-[650px] w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden flex items-center justify-center">
+      <section className="relative py-10 px-10 h-[200px] md:h-[650px] w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden flex items-center justify-center">
         <img
           src="/image/FUEZ-1.jpg"
           alt="Discover New Frontiers"
