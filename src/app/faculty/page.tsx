@@ -27,14 +27,14 @@ export default function Home() {
   
   
     return (
-        <div className=" ">
+        <div>
             {/* Science SVG Background */}
             <div className="absolute inset-0 bg-[url('/science.jpg')] bg-cover opacity-10"></div>
 
       {/* Hero Section with Background Image */}
-      <section className="text-center mt-22 px-20 py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
-          <h1 className="text-4xl md:text-5xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
+      <section className="text-center px-20 py-16 text-green-700 mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
+        <div className="bg-gray-50  opacity-85 p-10 rounded-lg">
+          <h1 className="text-4xl md:text-5xl font-bold">Faculty of Sciences Journal of Scientific Research.</h1>
           <p className="mt-4 font-bold text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
           <a
             href="/archives"

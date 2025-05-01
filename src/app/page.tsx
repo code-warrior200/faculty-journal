@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className="relative overflow-hidden pb-20">
+    <div className="relative mt-5 overflow-hidden pb-20">
 
       {/* Hero Section */}
       <section className="relative py-10 px-10 h-[200px] md:h-[650px] w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden flex items-center justify-center">
@@ -13,17 +13,19 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center object-cover"
           style={{ filter: 'brightness(0.5)' }} // dark overlay effect 
         />
-        <div className="absolute inset-0 bg-black/50" /> {/* dark overlay */}
-        <div className="relative z-10 text-center px-6 md:px-12">
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg animate-fade-up">
+
+        <div className="absolute  inset-0 bg-black/50" /> {/* dark overlay */}
+        <div className="relative z-10  text-center px-6 md:px-12">
+          <h1 className="text-white mt-5 text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg animate-fade-up">
             Discover New Frontiers
           </h1>
-          <p className="text-green-200 mt-6 text-lg md:text-2xl max-w-2xl mx-auto animate-fade-up delay-150">
+          <p className="text-green-200 mt-2 text-lg md:text-2xl max-w-2xl mx-auto animate-fade-up delay-150">
             Innovate, Connect, and Excel with Our Global Community.
           </p>
           <a
             href="/faculty"
-            className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
+            className="mt-2 mb-8
+             inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
           >
             Learn More
           </a>
