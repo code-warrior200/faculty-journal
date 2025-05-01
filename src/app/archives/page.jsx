@@ -39,12 +39,12 @@ export default function Journals() {
   const uniqueDepartments = [...new Set(journals.map((journal) => journal.department))];
 
   return (
-    <div className="max-w-7xl  mt-10 p-6">
+    <div className="w-full lg:max-w-7xl  mt-10 py-6">
       {/* Header */}
-      <h1 className="text-4xl font-bold text-center text-green-600 mb-8">Journals</h1>
+      <h1 className="text-xl lg:text-3xl font-bold text-center text-green-600 mb-8">Journals</h1>
 
       {/* Filters */}
-      <div className="flex items-center py-20 px-10 bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat mx-auto justify-between mb-10">
+      <div className="lg:flex items-center space-y-5 lg:space-y-0 py-20 px-10 bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat w-full justify-between mb-10">
         
         {/* Search Bar */}
         <div className="w-full md:w-[35%]">
@@ -61,7 +61,7 @@ export default function Journals() {
         </div>
 
         {/* Filters Section */}
-        <div className="w-full md:w-fit flex gap-4">
+        <div className="w-full md:w-fit lg:flex gap-4 space-y-5 lg:space-y-0">
           {/* Department Select */}
           <div className="px-4 py-3 bg-white rounded-lg text-black">
             <select className='w-full outline-none text-sm'>

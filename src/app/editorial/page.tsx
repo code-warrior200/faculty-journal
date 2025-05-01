@@ -13,29 +13,29 @@ export default function EditorialBoard() {
   );
 
   return (
-    <div className="min-h-screen py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen py-16 px-0 lg:px-4">
+      <div className="mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-green-600 leading-tight">
+          <h1 className="text-xl lg:text-3xl md:text-5xl font-extrabold text-green-600 leading-tight">
             Meet Our Editorial Board
           </h1>
-          <p className="mt-4 text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-300 text-sm lg:text-lg md:text-xl max-w-2xl mx-auto">
             Distinguished academics driving innovation, research, and publishing excellence.
           </p>
         </div>
 
         {/* Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white shadow-md rounded-full p-2 space-x-2">
+          <div className="inline-flex bg-gray-900 shadow-md rounded-full p-2 space-x-2">
             {validTabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 rounded-full text-sm md:text-base font-semibold transition-all ${
+                className={`px-6 py-2 rounded-full text-xs lg:text-sm md:text-base font-semibold transition-all ${
                   activeTab === tab
                     ? "bg-green-700 text-white shadow-md"
-                    : "text-gray-600 hover:bg-gray-100"
+                    : "text-gray-200 hover:bg-gray-100"
                 }`}
               >
                 {tab === "science"
@@ -51,7 +51,7 @@ export default function EditorialBoard() {
           {filteredMembers.map((member, index) => (
             <div
               key={index}
-              className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 p-6 text-center relative"
+              className="group bg-gray-900 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 p-6 text-center relative"
             >
               <div className="flex justify-center mb-4">
                 <div className="relative w-24 h-24">
@@ -64,8 +64,8 @@ export default function EditorialBoard() {
                   />
                 </div>
               </div>
-              <h2 className="text-lg font-bold text-gray-800">{member.name}</h2>
-              <p className="text-green-700 mt-1 font-medium">{member.position}</p>
+              <h2 className="text-lg font-bold text-white">{member.name}</h2>
+              <p className="text-green-600 mt-1 font-medium">{member.position}</p>
             </div>
           ))}
         </div>

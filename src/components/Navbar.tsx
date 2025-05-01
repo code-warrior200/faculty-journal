@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <img src="/image/logo.png" alt="Faculty Journal Logo" className="h-10 w-10 object-contain" />
-          <h3 className="text-2xl font-bold text-green-600">Faculty Of Science</h3>
+          <h3 className="text-xl lg:text-2xl font-bold text-green-600">Faculty Of Science</h3>
         </Link>
 
         {/* Desktop Navigation */}
