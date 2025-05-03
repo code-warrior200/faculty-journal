@@ -23,7 +23,8 @@ export default function Home() {
           </p>
           <a
             href="/faculty"
-            className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
+            className="mt-2 mb-8
+             inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
           >
             Learn More
           </a>
