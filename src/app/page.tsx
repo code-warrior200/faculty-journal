@@ -6,13 +6,13 @@ export default function Home() {
     <div className="relative overflow-hidden mt-15 lg:mt-20">
 
       {/* Hero Section */}
-      <section className="relative py-10 h-[200px] md:h-[650px] flex items-center justify-center">
-        <img
+      <section className="relative py-10 h-[200px] md:h-[650px] bg-[url('/image/FUEZ-1.jpg')] flex items-center justify-center">
+        {/* <img
           src="/image/FUEZ-1.jpg"
           alt="Discover New Frontiers"
           className="absolute inset-0 bg-cover bg-center object-cover"
           style={{ filter: 'brightness(0.5)' }} // dark overlay effect 
-        />
+        /> */}
         <div className="absolute inset-0 bg-black/50" /> {/* dark overlay */}
         <div className="relative z-10 text-center px-6 md:px-12">
           <h1 className="text-white text-2xl lg:text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg animate-fade-up">
@@ -44,7 +44,7 @@ export default function Home() {
             {
               name: 'Dr. Suleiman Balarabe',
               role: 'Acting Vice Chancellor',
-              image: '/image/VC-acting.jpg',
+              image: '/image/vcacting.jpg',
               bio: 'A visionary leader committed to academic excellence and innovation.',
             },
             {

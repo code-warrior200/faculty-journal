@@ -73,7 +73,7 @@ export default function JournalCard({
 
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-green-600 mb-1">{title}</h2>
+          <h2 className="textlg lg:text-2xl font-semibold text-green-600 mb-1">{title}</h2>
           <p className="text-sm text-gray-200 mb-2">By {authorName}</p>
           <p className="text-sm text-gray-200 mb-3">{department}</p>
           <p className="text-gray-200 text-sm line-clamp-3">{description}</p>

@@ -39,7 +39,7 @@ export default function Journals() {
   const uniqueDepartments = [...new Set(journals.map((journal) => journal.department))];
 
   return (
-    <div className="w-full lg:max-w-7xl  mt-10 py-6">
+    <div className="w-full lg:max-w-6xl mx-auto  mt-10 py-6">
       {/* Header */}
       <h1 className="text-xl lg:text-3xl font-bold text-center text-green-600 mb-8">Journals</h1>
 
