@@ -4,13 +4,13 @@ import DepartmentCard from "@/components/DepartmentCard";
 
 export default function DepartmentsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-20">
+    <div className="lg:max-w-7xl mx-auto lg:px-6 py-20">
       {/* Page Header */}
       <div className="text-center mb-16">
-        <h1 className="text-5xl font-extrabold text-green-600 mb-4">
+        <h1 className="text-xl lg:text-3xl font-extrabold text-green-600 mb-4">
           Explore Our Departments
         </h1>
-        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-300 text-sm lg:text-lg max-w-2xl mx-auto">
           Discover the diverse fields of study offered by our faculty, driven by excellence and innovation.
         </p>
       </div>

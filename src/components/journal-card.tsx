@@ -63,7 +63,7 @@ export default function JournalCard({
   return (
     <div
       key={id}
-      className="bg-white rounded-lg shadow-md hover:shadow-lg transition flex flex-col overflow-hidden"
+      className="bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition flex flex-col overflow-hidden"
     >
       <img
         src={posterUrl || "/placeholder.jpg"}
@@ -73,10 +73,10 @@ export default function JournalCard({
 
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-1">{title}</h2>
-          <p className="text-sm text-gray-500 mb-2">By {authorName}</p>
-          <p className="text-sm text-gray-400 mb-3">{department}</p>
-          <p className="text-gray-700 text-sm line-clamp-3">{description}</p>
+          <h2 className="textlg lg:text-2xl font-semibold text-green-600 mb-1">{title}</h2>
+          <p className="text-sm text-gray-200 mb-2">By {authorName}</p>
+          <p className="text-sm text-gray-200 mb-3">{department}</p>
+          <p className="text-gray-200 text-sm line-clamp-3">{description}</p>
         </div>
 
         <div className="flex justify-between items-center mt-4 text-gray-600">
@@ -92,7 +92,7 @@ export default function JournalCard({
 
           <div className="flex items-center gap-2">
             <FaEye />
-            <span className="text-sm">{views || 0}</span>
+            <span className="text-sm text-white">{views || 0}</span>
           </div>
         </div>
       </div>

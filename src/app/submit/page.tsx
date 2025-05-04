@@ -86,9 +86,9 @@ export default function Submit() {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg mt-10">
-      <h1 className="text-3xl font-bold text-center text-gray-800">📄 Submit Your Journal</h1>
-      <p className="text-center text-gray-500 mt-2">
+    <div className="w-full lg:max-w-lg mx-auto bg-gray-900 p-8 shadow-lg rounded-lg mt-10">
+      <h1 className="text-xl lg:text-3xl font-bold text-center text-white">📄 Submit Your Journal</h1>
+      <p className="text-center text-gray-200 mt-2">
         Fill in the details below and upload your journal.
       </p>
 
@@ -121,12 +121,12 @@ export default function Submit() {
         />
 
         <div>
-          <label className="block text-gray-700 font-medium">Department</label>
+          <label className="block text-gray-200 font-medium">Department</label>
           <select
             required
             value={formData.department}
             onChange={(e) => setFormData((prev) => ({ ...prev, department: e.target.value }))}
-            className="mt-2 w-full p-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-2 w-full p-3 border border-gray-300 text-white bg-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="">Select Department</option>
             <option value="Science">Science</option>

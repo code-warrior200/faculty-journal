@@ -7,9 +7,9 @@ import React from "react";
 export default function FormInput({ label, ...props }: any) {
   return (
     <div>
-      <label className="block text-gray-700 font-medium">{label}</label>
+      <label className="block text-gray-200 font-medium">{label}</label>
       <input
-        className="mt-2 w-full p-3 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="mt-2 w-full p-3 border border-gray-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         {...props}
       />
     </div>
