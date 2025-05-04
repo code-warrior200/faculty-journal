@@ -50,9 +50,9 @@ export default function Home() {
               bio: 'A visionary leader committed to academic excellence and innovation.',
             },
             {
-              name: 'Dr. Jibril Lawal',
+              name: '...',
               role: 'Registrar',
-              image: '/image/registrar.jpeg',
+              image: '/image/faculty-officer.jpg',
               bio: 'Oversees the university’s administrative affairs with transparency and efficiency.',
             },
             {
