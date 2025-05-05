@@ -49,13 +49,13 @@ export default function Home() {
               bio: 'A visionary leader committed to academic excellence and innovation.',
             },
             {
-              name: 'Mal. Shehu Iya',
+              name: 'Alh. Sheu Iya Saidu',
               role: 'Registrar(Acting)',
               image: '/image/registacting.jpg',
               bio: 'Oversees the university’s administrative affairs with transparency and efficiency.',
             },
             {
-              name: 'Dr. Saheed Gbolahan Adewusi',
+              name: 'Dr. Saeed Gbolahan Adewusi',
               role: 'Dean, Faculty of Science',
               image: '/image/dean.jpg',
               bio: 'Leads the Faculty of Science with a focus on research and student success.',
