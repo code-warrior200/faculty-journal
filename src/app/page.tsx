@@ -44,14 +44,14 @@ export default function Home() {
           {[
             {
               name: 'Dr. Suleiman Balarabe',
-              role: 'Acting Vice Chancellor',
+              role: 'Vice Chancellor (Acting)',
               image: '/image/vcacting.jpg',
               bio: 'A visionary leader committed to academic excellence and innovation.',
             },
             {
-              name: '...',
-              role: 'Registrar',
-              image: '/image/faculty-officer.jpg',
+              name: 'Mal. Shehu Iya',
+              role: 'Registrar(Acting)',
+              image: '/image/registacting.jpg',
               bio: 'Oversees the university’s administrative affairs with transparency and efficiency.',
             },
             {
