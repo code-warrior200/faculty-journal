@@ -34,7 +34,7 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <section className="text-center mt-15 p-0 lg:px-20 lg:py-16 text-green-700 lg:mx-4 max-w-full relative bg-[url('/science.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="bg-gray-100 opacity-85 p-10 rounded-lg">
-          <h1 className="text-xl md:text-3xl font-bold">Faculty of Science Journal of Scientific Research.</h1>
+          <h1 className="text-xl md:text-3xl font-bold">Faculty of Sciences Journal of Scientific Research.</h1>
           <p className="mt-4 font-bold text-sm lg:text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
           <a
             href="/archives"
