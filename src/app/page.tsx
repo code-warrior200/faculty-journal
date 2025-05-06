@@ -44,19 +44,19 @@ export default function Home() {
           {[
             {
               name: 'Dr. Suleiman Balarabe',
-              role: 'Vice Chancellor (Acting)',
+              role: 'Vice Chancellor',
               image: '/image/vcacting.jpg',
               bio: 'A visionary leader committed to academic excellence and innovation.',
             },
             {
               name: 'Alh. Sheu Iya Saidu',
-              role: 'Registrar(Acting)',
+              role: 'Registrar',
               image: '/image/registacting.jpg',
               bio: 'Oversees the university’s administrative affairs with transparency and efficiency.',
             },
             {
               name: 'Dr. Saeed Gbolahan Adewusi',
-              role: 'Dean, Faculty of Science',
+              role: 'Dean, Faculty of Sciences',
               image: '/image/dean.jpg',
               bio: 'Leads the Faculty of Science with a focus on research and student success.',
             },
@@ -83,7 +83,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }
