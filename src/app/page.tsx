@@ -49,7 +49,7 @@ export default function Home() {
               bio: 'A visionary leader committed to academic excellence and innovation.',
             },
             {
-              name: 'Alh. Sheu Iya Saidu',
+              name: 'Alh. Shehu Iya',
               role: 'Registrar',
               image: '/image/registacting.jpg',
               bio: 'Oversees the university’s administrative affairs with transparency and efficiency.',

@@ -5,7 +5,7 @@ export const departments = [
       description:
         "Focuses on computing technologies, AI, cybersecurity, and software engineering.",
         departmentMembers: [
-        { name: "Dr. Abdulhakeem Suleimon", Possition: "H.O.D" },
+        { name: "Fadele Ayotunde Alaba, PhD", Possition: "H.O.D" },
       ],
       researchAreas: ["Machine Learning", "Blockchain Technology", "Big Data"],
       journals: [
