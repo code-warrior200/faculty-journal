@@ -20,7 +20,7 @@ export default function EditorialBoard() {
           <h1 className="text-xl lg:text-3xl md:text-5xl font-extrabold text-green-600 leading-tight">
             Meet Our Editorial Board
           </h1>
-          <p className="mt-4 text-gray-300 text-sm lg:text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="mt-4 text-gray-700 text-sm lg:text-lg md:text-xl max-w-2xl mx-auto">
             Distinguished academics driving innovation, research, and publishing excellence.
           </p>
         </div>
