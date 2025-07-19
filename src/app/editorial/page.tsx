@@ -27,7 +27,7 @@ export default function EditorialBoard() {
 
         {/* Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-gray-300 shadow-md rounded-full p-2 space-x-2">
+          <div className="inline-flex bg-gray-900 shadow-md rounded-full p-2 space-x-2">
             {validTabs.map((tab) => (
               <button
                 key={tab}
@@ -35,7 +35,7 @@ export default function EditorialBoard() {
                 className={`px-6 py-2 rounded-full text-xs lg:text-sm md:text-base font-semibold transition-all ${
                   activeTab === tab
                     ? "bg-green-700 text-white shadow-md"
-                    : "text-gray-600 hover:bg-gray-700"
+                    : "text-gray-600 hover:bg-gray-300"
                 }`}
               >
                 {tab === "science"
