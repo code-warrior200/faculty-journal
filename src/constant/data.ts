@@ -177,35 +177,35 @@ export const boardMembers = [
       position: "Technical Assistant",
       image: "/editor05.jpg",
       category: "science",
-    },
-    {
-      name: "Dr. Emily White",
-      position: "Editorial Board Member",
-      image: "/editor06.jpg",
-      category: "najosa",
-    },
-    {
-      name: "Dr. Emily White",
-      position: "Editorial Board Member",
-      image: "/editor07.jpg",
-      category: "najosa",
-    },
-    {
-      name: "Dr. Emily White",
-      position: "Editorial Board Member",
-      image: "/editor08.jpg",
-      category: "najosa",
-    },
-    {
-      name: "Dr. Emily White",
-      position: "Editorial Board Member",
-      image: "/editor09.jpg",
-      category: "najosa",
-    },
-    {
-      name: "Dr. Emily White",
-      position: "Editorial Board Member",
-      image: "/editor10.jpg",
-      category: "najosa",
-    },
+    }
+    // {
+    //   name: "Dr. Emily White",
+    //   position: "Editorial Board Member",
+    //   image: "/editor06.jpg",
+    //   category: "najosa",
+    // },
+    // {
+    //   name: "Dr. Emily White",
+    //   position: "Editorial Board Member",
+    //   image: "/editor07.jpg",
+    //   category: "najosa",
+    // },
+    // {
+    //   name: "Dr. Emily White",
+    //   position: "Editorial Board Member",
+    //   image: "/editor08.jpg",
+    //   category: "najosa",
+    // },
+    // {
+    //   name: "Dr. Emily White",
+    //   position: "Editorial Board Member",
+    //   image: "/editor09.jpg",
+    //   category: "najosa",
+    // },
+    // {
+    //   name: "Dr. Emily White",
+    //   position: "Editorial Board Member",
+    //   image: "/editor10.jpg",
+    //   category: "najosa",
+    // },
   ];
