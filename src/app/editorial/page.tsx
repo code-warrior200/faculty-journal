@@ -35,7 +35,7 @@ export default function EditorialBoard() {
                 className={`px-6 py-2 rounded-full text-xs lg:text-sm md:text-base font-semibold transition-all ${
                   activeTab === tab
                     ? "bg-green-700 text-white shadow-md"
-                    : "text-gray-600 hover:bg-gray-100"
+                    : "text-gray-600 hover:bg-gray-700"
                 }`}
               >
                 {tab === "science"
