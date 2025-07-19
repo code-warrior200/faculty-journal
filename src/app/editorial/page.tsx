@@ -27,7 +27,7 @@ export default function EditorialBoard() {
 
         {/* Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-gray-900 shadow-md rounded-full p-2 space-x-2">
+          <div className="inline-flex bg-gray-300 shadow-md rounded-full p-2 space-x-2">
             {validTabs.map((tab) => (
               <button
                 key={tab}
