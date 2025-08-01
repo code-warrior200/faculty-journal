@@ -37,7 +37,7 @@ export default function Home() {
           <h1 className="text-xl md:text-3xl font-bold">Faculty of Sciences Education Journal of Scientific Research.</h1>
           <p className="mt-4 font-bold text-sm lg:text-lg">Fedral University Of Eduction Zaria (FUEZ) & Nigeria Journal Of Science Education Research</p>
           <a
-            href="/archives"
+            href="/journals"
             className="mt-6 inline-block bg-green-600 text-gray-200 px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition"
           >
             Browse Journals

@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "Editorial Board", path: "/editorial" },
     { name: "Departments", path: "/departments" },
-    { name: "Archives", path: "/archives" },
+    { name: "Journals", path: "/journals" },
   ];
 
   return (
